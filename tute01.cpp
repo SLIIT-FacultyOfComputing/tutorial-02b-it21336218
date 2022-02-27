@@ -16,15 +16,21 @@ You already know that printf() in C is std::cout in C++ e.g.
 printf("Hello World") --> std::cout << "Hello World";
 2.54cm = 1 inch
 */
+#include <iostream>
 
-
-#include <stdio.h>
-int main() 
+int main ()
 {
-    float cm, inches;
-    printf("Enter a length in cm : ");
-    scanf("%f",&cm);
-    inches = cm / 2.54;
-    printf("Length in inches is %f \n", inches);
-    return 0;
-}  
+	float cmlen, inchlen;
+	
+	std::cout << "Enter length in cm : ";
+	std::cin >> cmlen;
+	
+	std::cout << std::endl;
+	
+	inchlen = cmlen / 2.54;
+	
+	std::cout << "Lenth in inches : " << inchlen << std::endl;
+	
+	return 0;
+}
+
